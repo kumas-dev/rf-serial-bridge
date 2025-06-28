@@ -51,6 +51,11 @@ $exePath = "$installDir\$exeName"
 # Register and start service
 Write-Host "Registering Windows Service..."
 sc.exe create $serviceName binPath= "`"$exePath`"" start= auto
+
+# Set restart policy for service failures
+Write-Host "Setting restart policy..."
+sc.exe failure $serviceName reset= 0 actions= restart/10000/restart/10000/restart/10000
+
 sc.exe start $serviceName
 
 Write-Host "Installation completed successfully."
