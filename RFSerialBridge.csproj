@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-RFSerialBridge-8718f82a-9ac5-4e5c-ac77-9d9a92b60415</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.6" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="9.0.6" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.6" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.6" />
+        <PackageReference Include="System.IO.Ports" Version="9.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Scripts\" />
+    </ItemGroup>
+</Project>
